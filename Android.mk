@@ -17,9 +17,8 @@ LOCAL_PATH := $(call my-dir)
 TARGET_ARCH_ABI := $(APP_ABI)
 
 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
+
 # Creating prebuilt for dependency: beatsaber-hook - version: 2.0.3
-include $(CLEAR_VARS)
-# Creating prebuilt for dependency: beatsaber-hook - version: 2.2.5
 include $(CLEAR_VARS)
 LOCAL_MODULE := beatsaber-hook_2_2_5
 LOCAL_EXPORT_C_INCLUDES := extern/beatsaber-hook
@@ -72,7 +71,7 @@ include $(PREBUILT_SHARED_LIBRARY)
 # In addition, ensure that you add them to the shared library build below.
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := platformmonke
+LOCAL_MODULE := longarmmonke
 LOCAL_SRC_FILES += $(call rwildcard,src/**,*.cpp)
 LOCAL_SRC_FILES += $(call rwildcard,extern/beatsaber-hook/src/inline-hook,*.cpp)
 LOCAL_SRC_FILES += $(call rwildcard,extern/beatsaber-hook/src/inline-hook,*.c)
@@ -85,6 +84,6 @@ LOCAL_SHARED_LIBRARIES += zip
 LOCAL_SHARED_LIBRARIES += monkecodegen
 LOCAL_SHARED_LIBRARIES += gorilla-utils
 LOCAL_LDLIBS += -llog
-LOCAL_CFLAGS += -I'extern/libil2cpp/il2cpp/libil2cpp' -isystem 'extern' -I'extern/monkecodegen/include' -DID='"platformmonke"' -DVERSION='"1.1.2"' -I'./shared' -I'./extern' -Wno-inaccessible-base -Wno-invalid-offsetof
+LOCAL_CFLAGS += -I'extern/libil2cpp/il2cpp/libil2cpp' -isystem 'extern' -I'extern/monkecodegen/include' -DID='"longarmmonke"' -DVERSION='"1.1.2"' -I'./shared' -I'./extern' -Wno-inaccessible-base -Wno-invalid-offsetof
 LOCAL_C_INCLUDES += ./include ./src
 include $(BUILD_SHARED_LIBRARY)

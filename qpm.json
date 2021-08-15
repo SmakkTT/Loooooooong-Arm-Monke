@@ -2,9 +2,9 @@
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "info": {
-    "name": "Platform Monke",
-    "id": "platformmonke",
-    "version": "2.0.0",
+    "name": "NoClip Monke",
+    "id": "noclipmonke",
+    "version": "1.0.0",
     "url": null,
     "additionalData": {}
   },
@@ -30,7 +30,12 @@
     },
     {
       "id": "monkecodegen",
-      "versionRange": "0.8.0",
+      "versionRange": "*",
+      "additionalData": {}
+    },
+    {
+      "id": "gorilla-utils",
+      "versionRange": "*",
       "additionalData": {}
     },
     {
